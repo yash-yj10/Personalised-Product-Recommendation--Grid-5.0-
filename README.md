@@ -39,20 +39,24 @@ This project implements a personalized video game ranking system that generates 
 
 1. Clone the repository to your local machine:
    
-'''
-git clone https://github.com/yourusername/personalized-game-ranking.git
-cd personalized-game-ranking
-'''
+```bash
+git clone https://github.com/yash-yj10/Personalised-Product-Recommendation--Grid-5.0-
+cd Personalised-Product-Recommendation--Grid-5.0
+```
 
 
 2. Install the required packages:
+```bash
 pip install -r requirements.txt
+```
 
 
 ### Usage
 
 1. Run the Streamlit app:
+```bash
 streamlit run main.py
+```
 
 
 2. Open your web browser and navigate to `http://localhost:8501` to access the user interface.
