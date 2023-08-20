@@ -22,6 +22,20 @@ def fetch_game_details(game_name):
         return response.json()["results"][0]
     else:
         return None
+    
+# Fetch games with similar genres
+def fetch_similar_genre_games(genres):
+    api_url = "https://api.rawg.io/api/games"
+    params = {
+        "key": RAWG_API_KEY,
+        "genres": ",".join(genres),
+        "page_size": 3  # Adjust the number of similar genre games you want to display
+    }
+    response = requests.get(api_url, params=params)
+    if response.status_code == 200:
+        return response.json()["results"]
+    else:
+        return []
 
 # Streamlit app
 def main():
@@ -106,6 +120,12 @@ def main():
         game_data = fetch_game_details(search_query)
         if game_data:
             display_game_card(game_data)
+            if "genres" in game_data:
+                similar_genre_games = fetch_similar_genre_games([genre["slug"] for genre in game_data["genres"]])
+                if similar_genre_games:
+                    st.write("### Similar Genre Games:")
+                    for similar_genre_game in similar_genre_games:
+                        display_game_card(similar_genre_game)
         else:
             st.warning(f"No game details found for '{search_query}'")
 
