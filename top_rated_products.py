@@ -1,15 +1,10 @@
 import numpy as np 
-
-
 from sklearn.metrics.pairwise import cosine_similarity
-
 from sklearn.metrics import mean_squared_error
-
 from scipy.sparse.linalg import svds # for sparse matrices
 
 # import this file and pass as an argument
 # final_rating=pd.read_csv("final_rating.csv")
-
 
 #   (example to use function below)   Recommending top 5 products with 50 minimum interactions based on popularity
 # list(top_n_products(final_rating, 5, 50))
@@ -49,8 +44,6 @@ def similar_users(user_index, interactions_matrix):
 
 
 # index of user in the dataframe for which we want recommendation
-
-
 def recommendations(user_index, num_of_products, interactions_matrix):
     
     #Saving similar users using the function similar_users defined above

@@ -5,12 +5,8 @@ import pandas as pd
 import os
 from config import RAWG_API_KEY
 
-# RAWG_API_KEY = os.environ.get("RAWG_API_KEY")
-
 
 # Function to fetch game details from the RAWG API for specific game names
-
-
 @st.cache_data
 def fetch_game_details(game_name):
     api_url = f"https://api.rawg.io/api/games"
@@ -28,8 +24,6 @@ def fetch_game_details(game_name):
         return None
 
 # Streamlit app
-
-
 def main():
     st.set_page_config(
         page_title="Game Info App",
@@ -155,10 +149,6 @@ def main():
 
 def display_game_card(game):
     with st.container():
-        # st.write(
-        #     f'<div style="background-color: #f5f5f5; padding: 15px; border-radius: 10px;">',
-        #     unsafe_allow_html=True
-        # )
         cols = st.columns(3)
         with cols[0]:
             if "background_image" in game:
@@ -191,7 +181,6 @@ if __name__ == "__main__":
     st.write("Feel free to get in touch with us!")
     col1, col2 = st.columns(2)
 
-    # Contact information for Person 1
     with col1:
         st.subheader("Shubham Solanki")
         st.write("Email: [solanki.4@iitj.ac.in](mailto:solanki.4@iitj.ac.in)")
@@ -200,7 +189,6 @@ if __name__ == "__main__":
         st.write("LinkedIn: [Shubham Solanki LinkedIn](https://www.linkedin.com/in/shubham-solanki-699baa239/)")
         st.write("GitHub: [Shubham Solanki GitHub](https://github.com/Shubham163solanki)")
 
-    # Contact information for Person 2
     with col2:
         st.subheader("Yash Jangir")
         st.write("Email: [jangir.8@iitj.ac.in](mailto:jangir.8@iitj.ac.in)")
