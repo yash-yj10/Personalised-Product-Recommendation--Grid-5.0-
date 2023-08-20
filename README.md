@@ -15,7 +15,7 @@ Welcome to the Personalized Video Game Ranking System repository! This project a
 - [User Interface](#user-interface)
 - [Future Enhancements](#future-enhancements)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Project Overview
 
