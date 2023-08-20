@@ -10,7 +10,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](CO
 
 There are several ways you can contribute to the project:
 
-- Reporting bugs or suggesting improvements by [creating issues](https://github.com/yash-yj10/Personalised-Product-Recommendation--Grid-5.0-issues).
+- Reporting bugs or suggesting improvements by [creating issues](https://github.com/yash-yj10/Personalised-Product-Recommendation--Grid-5.0-/issues).
 - Contributing code enhancements or fixes by [opening pull requests](https://github.com/yash-yj10/Personalised-Product-Recommendation--Grid-5.0-/pulls).
 - Providing feedback on proposed changes in pull requests.
 - Improving documentation by submitting pull requests.
